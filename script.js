@@ -44,7 +44,7 @@ async function init() {
   await loadSVG("stripeLayer", "assets/liveries/tiger/212_tiger_stripes.svg");
 
   const bodyPicker = new iro.ColorPicker("#bodyPicker", {
-    width: 150,
+    width: 100,
     color: "#5b3a29",
     layout: [
       { component: iro.ui.Wheel },
@@ -53,7 +53,7 @@ async function init() {
   });
 
   const stripePicker = new iro.ColorPicker("#stripePicker", {
-    width: 150,
+    width: 100,
     color: "#d8a11d",
     layout: [
       { component: iro.ui.Wheel },
