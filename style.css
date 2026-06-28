@@ -105,21 +105,22 @@ h1 {
 
 .selectors-card {
   padding: 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
-  justify-items: center;
-  gap: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 42px;
   width: 100%;
 }
 
 .selector-block {
-  min-width: 0;
-  width: 100%;
-  display: grid;
-  justify-items: center;
+  width: 130px;
+  flex: 0 0 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  gap: 4px;
+  gap: 4px
 }
 
 .selector-label {
