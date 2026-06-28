@@ -106,14 +106,19 @@ h1 {
 .selectors-card {
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  justify-items: center;
   gap: 18px;
+  width: 100%;
 }
 
 .selector-block {
   min-width: 0;
+  width: 100%;
   display: grid;
   justify-items: center;
+  text-align: center;
   gap: 4px;
 }
 
@@ -241,6 +246,7 @@ h1 {
 
 .wheel-wrap {
   position: relative;
+  width: 120px;
   display: grid;
   place-items: center;
 }
