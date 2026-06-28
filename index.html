@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shrimp Config Test</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="controls">
+
+    <div>
+
+        <label>Body</label><br>
+
+        <input
+            type="color"
+            id="bodyColor"
+            value="#5b3a29"
+        >
+
+    </div>
+
+    <div>
+
+        <label>Stripes</label><br>
+
+        <input
+            type="color"
+            id="stripeColor"
+            value="#d8a11d"
+        >
+
+    </div>
+
+</div>
+
+
+<div id="cabinet">
+
+    <img
+        class="layer base"
+        src="assets/base/212_base_v2.png"
+    >
+
+    <object
+        id="bodySVG"
+        class="layer"
+        data="assets/liveries/tiger/212_tiger_body.svg"
+        type="image/svg+xml">
+    </object>
+
+    <object
+        id="stripeSVG"
+        class="layer"
+        data="assets/liveries/tiger/212_tiger_stripes.svg"
+        type="image/svg+xml">
+    </object>
+
+    <img
+        class="layer shadows"
+        src="assets/overlays/shadows.png"
+    >
+
+    <img
+        class="layer spotlight"
+        src="assets/overlays/spotlight.png"
+    >
+
+    <img
+        class="layer highlights"
+        src="assets/overlays/highlights.png"
+    >
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

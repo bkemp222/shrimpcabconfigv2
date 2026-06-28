@@ -1,0 +1,94 @@
+body{
+
+    background:#222;
+
+    color:white;
+
+    font-family:Arial;
+
+    padding:40px;
+
+}
+
+#controls{
+
+    display:flex;
+
+    gap:40px;
+
+    margin-bottom:30px;
+
+}
+
+#cabinet{
+
+    position:relative;
+
+    width:700px;
+
+}
+
+.layer{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:700px;
+
+}
+
+.base{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+#bodySVG{
+
+    z-index:2;
+
+    mix-blend-mode:multiply;
+
+}
+
+#stripeSVG{
+
+    z-index:3;
+
+    mix-blend-mode:multiply;
+
+}
+
+.shadows{
+
+    z-index:4;
+
+    mix-blend-mode:multiply;
+
+    pointer-events:none;
+
+}
+
+.spotlight{
+
+    z-index:5;
+
+    mix-blend-mode:soft-light;
+
+    pointer-events:none;
+
+}
+
+.highlights{
+
+    z-index:6;
+
+    mix-blend-mode:overlay;
+
+    pointer-events:none;
+
+}
