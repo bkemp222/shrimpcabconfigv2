@@ -239,6 +239,12 @@ h1 {
   animation: swatch-breathe 1.8s ease-in-out infinite;
 }
 
+.wheel-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
 .swatch {
   width: 56px;
   height: 56px;
