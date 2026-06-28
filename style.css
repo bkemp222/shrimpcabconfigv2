@@ -66,6 +66,8 @@ h1 {
   display: block;
 }
 
+
+
 .color-layer {
   z-index: 2;
   mix-blend-mode: multiply;
