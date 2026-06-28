@@ -103,24 +103,26 @@ h1 {
   pointer-events: none;
 }
 
+/* SELECTORS */
+
 .selectors-card {
+  width: 100%;
   padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 42px;
-  width: 100%;
+  gap: clamp(22px, 9vw, 52px);
+  flex-wrap: nowrap;
 }
 
 .selector-block {
-  width: 130px;
-  flex: 0 0 130px;
+  width: 132px;
+  flex: 0 0 132px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 4px
 }
 
 .selector-label {
@@ -133,6 +135,7 @@ h1 {
 
 .selected-name {
   min-height: 24px;
+  width: 100%;
   text-align: center;
   font-size: clamp(1rem, 4vw, 1.35rem);
   font-weight: 900;
@@ -141,9 +144,13 @@ h1 {
 
 .selected-meta {
   min-height: 17px;
+  width: 100%;
   color: rgba(0, 0, 0, 0.55);
   font-size: 0.72rem;
+  text-align: center;
 }
+
+/* WHEEL */
 
 .wheel-arrow {
   color: rgba(0, 0, 0, 0.38);
@@ -153,21 +160,38 @@ h1 {
 }
 
 .wheel-arrow.up {
-  margin-top: 6px;
-  margin-bottom: -2px;
+  margin-top: 7px;
+  margin-bottom: 2px;
 }
 
 .wheel-arrow.down {
-  margin-top: -2px;
+  margin-top: 2px;
 }
 
+.wheel-wrap {
+  position: relative;
+  width: 120px;
+  height: 112px;
+  display: grid;
+  place-items: center;
+}
 
+.wheel-zone {
+  position: absolute;
+  width: 78px;
+  height: 60px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+  z-index: 20;
+}
 
 .wheel {
   position: relative;
   width: 120px;
   height: 112px;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -200,11 +224,12 @@ h1 {
 .wheel::before,
 .wheel::after {
   content: "";
+  width: 100%;
   flex: 0 0 28px;
 }
 
 .wheel-item {
-  width: 100%;
+  width: 120px;
   height: 56px;
   flex: 0 0 56px;
   scroll-snap-align: center;
@@ -225,16 +250,6 @@ h1 {
   padding: 0;
 }
 
-.wheel-zone {
-  width: 78px;
-  height: 60px;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  pointer-events: none;
-  position: absolute;
-  z-index: 20;
-}
-
 .wheel-item.selected {
   opacity: 1;
   transform: scale(1.08);
@@ -245,17 +260,10 @@ h1 {
   animation: swatch-breathe 1.8s ease-in-out infinite;
 }
 
-.wheel-wrap {
-  position: relative;
-  width: 120px;
-  display: grid;
-  place-items: center;
-}
-
 .swatch {
+  display: block;
   width: 56px;
   height: 56px;
-    display: block;
   margin: 0 auto;
   object-fit: contain;
   border: 0;
@@ -282,8 +290,7 @@ h1 {
   }
 
   .selectors-card {
-    max-width: 480px;
-    width: 100%;
+    max-width: 520px;
     margin: 0 auto;
   }
 }
