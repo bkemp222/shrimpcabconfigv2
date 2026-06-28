@@ -92,3 +92,18 @@ body{
     pointer-events:none;
 
 }
+
+.color-layer {
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+#stripeLayer {
+  z-index: 3;
+}
+
+.color-layer svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
