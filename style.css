@@ -103,8 +103,6 @@ h1 {
   pointer-events: none;
 }
 
-/* SELECTORS */
-
 .selectors-card {
   width: 100%;
   padding: 0;
@@ -145,12 +143,10 @@ h1 {
 .selected-meta {
   min-height: 17px;
   width: 100%;
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(0, 0, 0, 0.48);
   font-size: 0.72rem;
   text-align: center;
 }
-
-/* WHEEL */
 
 .wheel-arrow {
   color: rgba(0, 0, 0, 0.38);
